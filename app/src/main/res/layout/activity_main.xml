@@ -19,7 +19,7 @@
             android:layout_marginRight="30dp"
             android:backgroundTint="#80A6A6A6"
             android:textColor="@color/white"
-            android:outlineAmbientShadowColor="@color/black"
+
             ></Button>
 
         <Button
@@ -80,7 +80,7 @@
         <ListView
             android:id="@+id/list"
             android:layout_width="match_parent"
-            android:layout_height="572dp">
+            android:layout_height="471dp">
 
 
         </ListView>

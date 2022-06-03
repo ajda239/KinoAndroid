@@ -11,6 +11,7 @@ import java.util.HashMap;
 
 public class ContactsJsonParser {
 
+
     private static final String TAG = ContactsJsonParser.class.getSimpleName();
     private ArrayList<HashMap<String, String>> contactList = new ArrayList<>();
 
@@ -19,22 +20,25 @@ public class ContactsJsonParser {
             JSONObject jsonObj = new JSONObject(jsonStr);
 
             // Getting JSON Array node
-            JSONArray contacts = jsonObj.getJSONArray("dnevi");
-
+            JSONArray contacts = jsonObj.getJSONArray("kino");
+            JSONObject kino = contacts.getJSONObject(0);
+            String imeKina = kino.getString("imeKina");
+            JSONArray dnevi = kino.getJSONArray("dnevi");
             // looping through All Contacts
-            for (int i = 0; i < contacts.length(); i++) {
+            for (int i = 0; i < dnevi.length(); i++) {
                 HashMap<String, String> contact = new HashMap<>();
 
-                JSONObject c = contacts.getJSONObject(i);
+                JSONObject c = dnevi.getJSONObject(i);
 
                 String id = c.getString("datum");
                 String naslov = "";
                 String ura= "  ";
 
                 JSONArray filmi = c.getJSONArray("filmi");
+                int st = 0;
                 for( int j = 0; j < filmi.length(); j++) {
                     JSONObject f = filmi.getJSONObject(j);
-
+                    st++;
                     naslov += f.getString("naslov");
 
                     JSONArray ure = f.getJSONArray("ure");
@@ -49,7 +53,12 @@ public class ContactsJsonParser {
                     }
                     naslov += "\n";
                     naslov += ura;
-                    naslov += "\n\n";
+                    if (st < filmi.length()) {
+                        naslov += "\n\n";
+                    } else {
+                        naslov += "\n";
+                    }
+
                     ura = "  ";
 
                 }
