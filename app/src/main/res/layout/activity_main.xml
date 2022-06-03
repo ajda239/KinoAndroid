@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+        <Button
+            android:id="@+id/kino"
+            android:layout_width="104dp"
+            android:layout_height="wrap_content"
+            android:text="Kino"
+            android:layout_marginRight="10dp"></Button>
+
+        <Button
+            android:id="@+id/film"
+            android:layout_width="104dp"
+            android:layout_height="wrap_content"
+
+            android:text="Film"></Button>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+        <Button
+            android:id="@+id/nazaj"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+
+            android:text="<-"></Button>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="false"
+            android:gravity="center_horizontal"
+            android:text="    Ime Kina    "
+            android:textSize="20sp"></TextView>
+        <Button
+            android:id="@+id/naprej"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+
+            android:text="->"></Button>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="572dp">
+
+
+        </ListView>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="right|bottom"
+            android:layout_marginRight="10dp"
+
+            android:text="Maps" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
