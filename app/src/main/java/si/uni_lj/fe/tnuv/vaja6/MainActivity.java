@@ -21,10 +21,10 @@ public class MainActivity extends AppCompatActivity{
 
         url = getResources().getString(R.string.urlNaslov);
         lv =  findViewById(R.id.list);
-        lv.setOnItemClickListener(((adapterView, view, i, l) ->{
-            Toast.makeText(this, "Izbral si item st. "+i, Toast.LENGTH_LONG).show();
+        //lv.setOnItemClickListener(((adapterView, view, i, l) ->{
+        //    Toast.makeText(this, "Izbral si item st. "+i, Toast.LENGTH_LONG).show();
 
-        } ));
+        //} ));
     }
 
     @Override
