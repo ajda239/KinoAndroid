@@ -24,9 +24,10 @@
                 android:layout_height="wrap_content"
                 android:paddingTop="6dip"
                 android:paddingBottom="2dip"
-                android:textColor="@color/teal_700"
+                android:textColor="#8C750000"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                />
 
             <TextView
                 android:id="@+id/naslov"
