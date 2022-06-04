@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity{
 
         //} ));
         configureFilmiButton();
-        //configureMapsButton();
+        configureMapsButton();
     }
 
     @Override
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity{
     }
 
     private void configureMapsButton() {
-        Button nextButton = (Button) findViewById(R.id.maps);
+        Button nextButton = (Button) findViewById(R.id.button2);
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
