@@ -2,8 +2,11 @@ package si.uni_lj.fe.tnuv.vaja6;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
@@ -25,6 +28,8 @@ public class MainActivity extends AppCompatActivity{
         //    Toast.makeText(this, "Izbral si item st. "+i, Toast.LENGTH_LONG).show();
 
         //} ));
+        configureFilmiButton();
+        //configureMapsButton();
     }
 
     @Override
@@ -37,8 +42,6 @@ public class MainActivity extends AppCompatActivity{
             public void run() {
                 String rezultat = pp.prenesiPodatke();
                 runOnUiThread(()-> prikaziPodatke(rezultat));
-
-
             }
         }.start();
 
@@ -51,5 +54,25 @@ public class MainActivity extends AppCompatActivity{
 
 
         lv.setAdapter(adapter);
+    }
+
+    private void configureFilmiButton() {
+        Button nextButtton = (Button) findViewById(R.id.film);
+        nextButtton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, MainActivity2.class));
+            }
+        });
+    }
+
+    private void configureMapsButton() {
+        Button nextButton = (Button) findViewById(R.id.maps);
+        nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, Maps.class));
+            }
+        });
     }
 }

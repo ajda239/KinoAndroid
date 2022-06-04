@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">Vaja6</string>
+    <string name="app_name">KinoSpored</string>
     <string name="napaka_omrezje">Omrežje ni na voljo.</string>
     <string name="napaka_povezava">Vzpostavitev povezave s strežnikom ni uspela.</string>
     <string name="urlNaslov">https://run.mocky.io/v3/beec65cf-d1a7-4f45-a1c9-624186d3aee6</string>
-    <string name="urlNaslov1">https://run.mocky.io/v3/6ca979b0-592d-4b0d-8fac-4c8de96e35eb</string>
+    <string name="urlNaslov1">https://run.mocky.io/v3/0f3f5223-9927-4438-b1cc-2eaa926af7eb</string>
 
 </resources>

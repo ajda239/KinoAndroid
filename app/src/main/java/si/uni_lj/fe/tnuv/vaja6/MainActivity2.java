@@ -2,8 +2,11 @@ package si.uni_lj.fe.tnuv.vaja6;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
@@ -25,6 +28,7 @@ public class MainActivity2 extends AppCompatActivity{
         //    Toast.makeText(this, "Izbral si item st. "+i, Toast.LENGTH_LONG).show();
 
         //} ));
+        configureKinotiButton();
     }
 
     @Override
@@ -52,5 +56,15 @@ public class MainActivity2 extends AppCompatActivity{
 
 
         lv.setAdapter(adapter);
+    }
+
+    private void configureKinotiButton() {
+        Button nextButtton = (Button) findViewById(R.id.kino);
+        nextButtton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity2.this, MainActivity.class));
+            }
+        });
     }
 }
