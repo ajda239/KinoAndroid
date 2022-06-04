@@ -82,17 +82,17 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
             //configureNazajButton();
 
             //DELUJE
-            arrayListLokacije.add(kinodvor);
-            arrayListLokacije.add(komuna);
-            arrayListLokacije.add(kolosej);
             arrayListLokacije.add(bezigrad);
+            arrayListLokacije.add(komuna);
             arrayListLokacije.add(kinoteka);
+            arrayListLokacije.add(kolosej);
+            arrayListLokacije.add(kinodvor);
 
-            arrayListImena.add(kinodvorIme);
-            arrayListImena.add(komunaIme);
-            arrayListImena.add(kolosejIme);
             arrayListImena.add(bezigradIme);
+            arrayListImena.add(komunaIme);
             arrayListImena.add(kinotekaIme);
+            arrayListImena.add(kolosejIme);
+            arrayListImena.add(kinodvorIme);
 
         } else requestLocationPermission();
     }
@@ -107,7 +107,7 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
      * installed Google Play services and returned to the app.
      */
 
-    public Integer indeks = 1;
+    private int indeks = Global.indeksiranje;
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
