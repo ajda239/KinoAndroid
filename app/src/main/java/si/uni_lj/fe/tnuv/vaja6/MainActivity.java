@@ -46,7 +46,6 @@ public class MainActivity extends AppCompatActivity{
             }
         }.start();
 
-
     }
     private void prikaziPodatke(String podatki) {
         ArrayList<HashMap<String, String>> seznamKontaktov = new ContactsJsonParser().parseToArrayList(podatki);
@@ -72,7 +71,7 @@ public class MainActivity extends AppCompatActivity{
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, Maps.class));
+                startActivity(new Intent(MainActivity.this, MapsActivity2.class));
             }
         });
     }

@@ -4,5 +4,6 @@
     <string name="napaka_povezava">Vzpostavitev povezave s strežnikom ni uspela.</string>
     <string name="urlNaslov">https://run.mocky.io/v3/beec65cf-d1a7-4f45-a1c9-624186d3aee6</string>
     <string name="urlNaslov1">https://run.mocky.io/v3/0f3f5223-9927-4438-b1cc-2eaa926af7eb</string>
+    <string name="title_activity_maps2">MapsActivity2</string>
 
 </resources>
