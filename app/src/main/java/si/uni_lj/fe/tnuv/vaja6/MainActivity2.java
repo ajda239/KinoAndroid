@@ -19,7 +19,7 @@ public class MainActivity2 extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-        url = getResources().getString(R.string.urlNaslov);
+        url = getResources().getString(R.string.urlNaslov1);
         lv =  findViewById(R.id.list);
         //lv.setOnItemClickListener(((adapterView, view, i, l) ->{
         //    Toast.makeText(this, "Izbral si item st. "+i, Toast.LENGTH_LONG).show();
@@ -46,9 +46,9 @@ public class MainActivity2 extends AppCompatActivity{
     }
     //neki drugi podatki za filme!!!!!!
     private void prikaziPodatke(String podatki) {
-        ArrayList<HashMap<String, String>> seznamKontaktov = new ContactsJsonParser().parseToArrayList(podatki);
+        ArrayList<HashMap<String, String>> seznamKontaktov = new ContactsJsonParser1().parseToArrayList(podatki);
         //Toast.makeText(this, podatki, Toast.LENGTH_LONG).show();
-        SimpleAdapter adapter = new SimpleAdapter(this, seznamKontaktov, R.layout.list_item, new String[]{"datum", "naslov"}, new int[]{R.id.id, R.id.naslov});
+        SimpleAdapter adapter = new SimpleAdapter(this, seznamKontaktov, R.layout.list_item, new String[]{"naslov", "ureString"}, new int[]{R.id.id, R.id.naslov});
 
 
         lv.setAdapter(adapter);

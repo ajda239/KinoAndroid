@@ -50,6 +50,7 @@
             ></Button>
 
         <TextView
+            android:id="@+id/imeKina"
             android:layout_width="222dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="false"
