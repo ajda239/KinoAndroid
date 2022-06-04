@@ -33,7 +33,7 @@ public class ContactsJsonParser {
 
                 String id = c.getString("datum");
                 String naslov = "";
-                String ura= "  ";
+                String ura= "";
 
                 JSONArray filmi = c.getJSONArray("filmi");
                 int st = 0;
@@ -49,7 +49,7 @@ public class ContactsJsonParser {
                         stevec ++;
                         ura += u.getString("ura");
                         if(stevec < ure.length()) {
-                            ura += "  |  ";
+                            ura += " | ";
                         }
                     }
                     naslov += "\n";
@@ -57,10 +57,10 @@ public class ContactsJsonParser {
                     if (st < filmi.length()) {
                         naslov += "\n\n";
                     } else {
-                        naslov += "\n";
+                        naslov += "";
                     }
 
-                    ura = "  ";
+                    ura = " ";
 
                 }
 

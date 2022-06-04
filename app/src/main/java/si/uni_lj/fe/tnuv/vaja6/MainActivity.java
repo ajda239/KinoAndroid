@@ -52,8 +52,8 @@ public class MainActivity extends AppCompatActivity{
         //Toast.makeText(this, podatki, Toast.LENGTH_LONG).show();
         SimpleAdapter adapter = new SimpleAdapter(this, seznamKontaktov, R.layout.list_item, new String[]{"datum", "naslov"}, new int[]{R.id.id, R.id.naslov});
 
-
         lv.setAdapter(adapter);
+
     }
 
     private void configureFilmiButton() {
