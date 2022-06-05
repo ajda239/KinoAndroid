@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
@@ -35,7 +36,7 @@ public class MainActivity2 extends AppCompatActivity{
         //    Toast.makeText(this, "Izbral si item st. "+i, Toast.LENGTH_LONG).show();
 
         //} ));
-        sharedData.setValueIndeks2(0);
+        //sharedData.setValueIndeks2(0);
 
         configureKinotiButton();
         configureNaprejButton();
@@ -83,7 +84,7 @@ public class MainActivity2 extends AppCompatActivity{
         });
     }
     private void configureNaprejButton() {
-        Button nextButtton = (Button) findViewById(R.id.naprej);
+        ImageButton nextButtton = (ImageButton) findViewById(R.id.naprej);
         nextButtton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -106,7 +107,7 @@ public class MainActivity2 extends AppCompatActivity{
         });
     }
     private void configureNazajButton() {
-        Button nextButtton = (Button) findViewById(R.id.nazaj);
+        ImageButton nextButtton = (ImageButton) findViewById(R.id.nazaj);
         nextButtton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

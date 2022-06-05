@@ -17,13 +17,13 @@ public class Globals {
         Globals.instance = instance;
     }
 
-    private int notification_index;
+    private int notification_index = 0;
 
     private String notification_name;
     private int dolzina1;
 
 
-    private int notification_index2;
+    private int notification_index2 = 0;
 
     private String notification_date;
 

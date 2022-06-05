@@ -24,6 +24,7 @@ import android.location.LocationManager;
 import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
@@ -76,10 +77,10 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
         if (isLocationPermissionGranted()) {
             // Obtain the SupportMapFragment and get notified when the map is ready to be used.
             SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                    .findFragmentById(R.id.map);
+                    .findFragmentById(R.id.maps);
             mapFragment.getMapAsync(this);
 
-            //configureNazajButton();
+            configureNazajButton();
 
             //DELUJE
             arrayListLokacije.add(bezigrad);
@@ -107,7 +108,7 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
      * installed Google Play services and returned to the app.
      */
 
-    private int indeks = Global.indeksiranje;
+    private int indeks = Globals.getInstance().getValueIndeks();
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
@@ -189,7 +190,7 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
     }
 
     private void configureNazajButton() {
-        Button nazajButton = (Button) findViewById(R.id.nazajButton);
+        ImageButton nazajButton = (ImageButton) findViewById(R.id.nazajButton);
         nazajButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

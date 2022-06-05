@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical">
 
   <LinearLayout
@@ -26,7 +27,7 @@
         android:id="@+id/film"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="#80A6A6A6"
+        android:backgroundTint="#80454545"
         android:textColor="@color/white"
         android:outlineAmbientShadowColor="@color/black"
         android:text="Film"></Button>
@@ -38,7 +39,7 @@
       android:gravity="center_horizontal"
       android:layout_marginTop="5dp">
 
-    <Button
+<!--    <Button
         android:id="@+id/nazaj"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
@@ -69,7 +70,46 @@
         android:layout_marginRight="50dp"
         android:backgroundTint="@color/white"
         android:textColor= "@color/black"
-        android:outlineAmbientShadowColor="@color/black"></Button>
+        android:outlineAmbientShadowColor="@color/black"></Button>-->
+
+    <ImageButton
+        android:id="@+id/nazaj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="?attr/actionModeCloseDrawable"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="27dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        />
+
+    <TextView
+        android:id="@+id/datum"
+        android:layout_width="222dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="false"
+        android:gravity="center_horizontal"
+        android:layout_marginRight="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="8dp"
+        android:textSize="20sp"
+
+        android:textColor="@color/black"
+        ></TextView>
+
+    <ImageButton
+        android:id="@+id/naprej"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="0dp"
+        android:rotationY="180"
+        android:src="?attr/actionModeCloseDrawable"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+ />
   </LinearLayout>
 
   <LinearLayout
