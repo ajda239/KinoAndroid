@@ -14,6 +14,7 @@ public class ContactsJsonParser1 {
 
     private static final String TAG = ContactsJsonParser1.class.getSimpleName();
     private ArrayList<HashMap<String, String>> contactList = new ArrayList<>();
+    Globals sharedData = Globals.getInstance();
 
     public ArrayList<HashMap<String, String>> parseToArrayList(String jsonStr){
         try {
@@ -21,8 +22,12 @@ public class ContactsJsonParser1 {
 
             // Getting JSON Array node
             JSONArray contacts = jsonObj.getJSONArray("dnevi");
-            JSONObject dan = contacts.getJSONObject(0);
-            String datum = dan.getString("datum");
+
+            int n = sharedData.getValueIndeks2();
+            JSONObject dan = contacts.getJSONObject(n);
+            //String datum = dan.getString("datum");
+            String kinoDatum = dan.getString("datum");
+            sharedData.setValueDatum(kinoDatum);
             JSONArray filmi = dan.getJSONArray("filmi");
             // looping through All Contacts
             for (int i = 0; i < filmi.length(); i++) {

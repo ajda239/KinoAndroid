@@ -20,10 +20,11 @@ public class MainActivity extends AppCompatActivity{
 
     private String url;
     private String imeKino = Global.imeKina;
+    int indeks = Global.indeksiranje;
     ListView lv;
     TextView kinoIme;
-    int indeks = Global.indeksiranje;
 
+    Globals sharedData = Globals.getInstance();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,8 +37,12 @@ public class MainActivity extends AppCompatActivity{
         //    Toast.makeText(this, "Izbral si item st. "+i, Toast.LENGTH_LONG).show();
 
         //} ));
+        sharedData.setValueIndeks(0);
+
         configureFilmiButton();
         configureMapsButton();
+        configureNaprejButton();
+        configureNazajButton();
     }
 
     @Override
@@ -63,7 +68,8 @@ public class MainActivity extends AppCompatActivity{
         lv.setAdapter(adapter);
 
         kinoIme =  findViewById(R.id.imeKina);
-        kinoIme.setText(imeKino);
+        String m = sharedData.getValueIme();
+        kinoIme.setText(m);
     }
 
     private void configureFilmiButton() {
@@ -72,6 +78,57 @@ public class MainActivity extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, MainActivity2.class));
+            }
+        });
+    }
+    private void configureNaprejButton() {
+        Button nextButtton = (Button) findViewById(R.id.naprej);
+        nextButtton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int n = sharedData.getValueIndeks();
+
+                if(n < 4) {
+                    n++;
+                    sharedData.setValueIndeks(n);
+                    onStart();
+                } else{
+                    Context context = getApplicationContext();
+                    String text = "Ni več možno iti naprej.";
+                    int duration = Toast.LENGTH_SHORT;
+
+                    Toast toast = Toast.makeText(context, text, duration);
+                    toast.show();
+                }
+
+
+
+
+            }
+        });
+    }
+    private void configureNazajButton() {
+        Button nextButtton = (Button) findViewById(R.id.nazaj);
+        nextButtton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int n = sharedData.getValueIndeks();
+
+                if(n > 0) {
+                    n--;
+                    sharedData.setValueIndeks(n);
+                    onStart();
+                } else{
+                    Context context = getApplicationContext();
+                    String text = "Ni več možno iti nazaj.";
+                    int duration = Toast.LENGTH_SHORT;
+
+                    Toast toast = Toast.makeText(context, text, duration);
+                    toast.show();
+                }
+
+
+
             }
         });
     }

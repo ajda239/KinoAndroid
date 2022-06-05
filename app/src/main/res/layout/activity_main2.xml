@@ -55,7 +55,6 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="false"
         android:gravity="center_horizontal"
-        android:text="Dan In Datum"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
         android:textSize="20sp"

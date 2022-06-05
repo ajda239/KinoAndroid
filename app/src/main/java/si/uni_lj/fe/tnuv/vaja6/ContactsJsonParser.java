@@ -16,15 +16,20 @@ public class ContactsJsonParser {
     private static final String TAG = ContactsJsonParser.class.getSimpleName();
     private ArrayList<HashMap<String, String>> contactList = new ArrayList<>();
     private int indeks = Global.indeksiranje;
-
+    Globals sharedData = Globals.getInstance();
     public ArrayList<HashMap<String, String>> parseToArrayList(String jsonStr){
         try {
+
             JSONObject jsonObj = new JSONObject(jsonStr);
 
             // Getting JSON Array node
             JSONArray contacts = jsonObj.getJSONArray("kino");
-            JSONObject kino = contacts.getJSONObject(indeks);
-            Global.imeKina = kino.getString("imeKina");
+
+            int n = sharedData.getValueIndeks();
+            JSONObject kino = contacts.getJSONObject(n);
+
+            String kinoIme = kino.getString("imeKina");
+            sharedData.setValueIme(kinoIme);
             //System.out.println(Global.imeKina);
             JSONArray dnevi = kino.getJSONArray("dnevi");
             // looping through All Contacts
