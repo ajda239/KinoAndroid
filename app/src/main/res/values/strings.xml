@@ -2,8 +2,8 @@
     <string name="app_name">KinoSpored</string>
     <string name="napaka_omrezje">Omrežje ni na voljo.</string>
     <string name="napaka_povezava">Vzpostavitev povezave s strežnikom ni uspela.</string>
-    <string name="urlNaslov">https://run.mocky.io/v3/beec65cf-d1a7-4f45-a1c9-624186d3aee6</string>
-    <string name="urlNaslov1">https://run.mocky.io/v3/0f3f5223-9927-4438-b1cc-2eaa926af7eb</string>
+    <string name="urlNaslov">https://run.mocky.io/v3/242c7096-d00b-4a03-a51b-c1bb1463615c</string>
+    <string name="urlNaslov1">https://run.mocky.io/v3/9c0360c2-0b2f-4b67-859a-1f3c73390ee3</string>
     <string name="title_activity_maps2">MapsActivity2</string>
 
 </resources>

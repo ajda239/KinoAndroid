@@ -90,7 +90,7 @@ public class MainActivity2 extends AppCompatActivity{
             public void onClick(View view) {
                 int n = sharedData.getValueIndeks2();
 
-                if(n < 31) {
+                if(n < 23) {
                     n++;
                     sharedData.setValueIndeks2(n);
                     onStart();
